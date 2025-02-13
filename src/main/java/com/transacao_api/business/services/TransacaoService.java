@@ -46,7 +46,7 @@ public class TransacaoService {
 
         OffsetDateTime dataHoraIntervalo = OffsetDateTime.now().minusSeconds(intervaloBusca);
 
-        log.info("Transações retornadas com sucesso");
+        log.info("Transações retornadas com sucesso!");
         return listaTrasacoes.stream()
                 .filter(transacao -> transacao.dataHora()
                         .isAfter(dataHoraIntervalo)).toList();
